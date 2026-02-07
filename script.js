@@ -71,3 +71,4 @@ function handleCommentSubmit(e) {
   localStorage.setItem('threads', JSON.stringify(threads));
   renderThreads();
 }
+
