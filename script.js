@@ -12,9 +12,12 @@ function renderThreads() {
     const threadDiv = document.createElement('div');
     threadDiv.className = 'thread';
 
+    // Создаём HTML с условием для изображения
+    const imageHTML = thread.image ? `<img src="${thread.image}" alt="${thread.title}" />` : '';
+
     threadDiv.innerHTML = `
       <h3>${thread.title}</h3>
-      <img src="${thread.image}" alt="${thread.title}" />
+      ${imageHTML}
       
       <div class="comment-section" id="comments-${index}">
         <h4>Комментарии</h4>
@@ -43,10 +46,11 @@ function renderThreads() {
 document.getElementById('threadForm').addEventListener('submit', e => {
   e.preventDefault();
   const title = document.getElementById('threadTitle').value;
-  const image = document.getElementById('threadImage').value;
+  const image = document.getElementById('threadImage').value.trim();
+
   const newThread = {
     title,
-    image,
+    image: image || '', // если поле пустое, ставим ''
     comments: []
   };
   threads.push(newThread);
@@ -67,6 +71,3 @@ function handleCommentSubmit(e) {
   localStorage.setItem('threads', JSON.stringify(threads));
   renderThreads();
 }
-
-// Изначально отображаем
-renderThreads();
