@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+#new-thread {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#new-thread form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#new-thread input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#new-thread button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#new-thread button:hover {
+  background-color: #45a049;
+}
+
+#threads {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.thread {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.thread img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.comment-section {
+  margin-top: 10px;
+}
+
+.comment {
+  background-color: #f9f9f9;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+
+.comment form {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.comment input {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.comment button {
+  padding: 6px 12px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comment button:hover {
+  background-color: #0b7dda;
+}

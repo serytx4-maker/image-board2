@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Имиджборд</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <h1>Борда Коли</h1>
+</header>
+
+<main>
+  <!-- Форма для создания треда -->
+  <section id="new-thread">
+    <h2>Создать новый тред</h2>
+    <form id="threadForm">
+      <input type="text" id="threadTitle" placeholder="Заголовок треда" required />
+      <input type="url" id="threadImage" placeholder="URL картинки" required />
+      <button type="submit">Создать</button>
+    </form>
+  </section>
+
+  <!-- /7a/ -->
+  <section id="threads"></section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
